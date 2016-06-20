@@ -54,7 +54,7 @@ var fancyItems = items.filter(function(i){ return i.materials.length >= 8; });
 fancyItems.forEach(function(i){ // for each fancy item 'i'
     var fancyItem = document.createElement("p"); // create a node on the page with a tagname <p> and store it as a variable called 'fancyItem'
     var fancyItemMaterials = document.createElement("ol"); // create a node on the page (an ordered list <ol>) to list the materials of 'fancyItem'
-    fancyItem.textContent = i.title; // add the name of the fancy item inside the <p> tag 'fancyItem'
+    fancyItem.textContent = i.title + " is made up of " + i.materials.length + " materials."; // add the name and # of materials of the fancy item inside the <p> tag 'fancyItem'
     i.materials.forEach(function(m){ // for each fancy item 'i' with a property 'materials' called 'm'
         var material = document.createElement("li"); // create a list item <li> and store it as a variable called 'material'
         material.textContent = m; // add the material 'm' inside the list item
